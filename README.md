@@ -25,7 +25,7 @@ Optional: If you wan't to add a mapping for the 418 status code you can edit [\_
 ## Dependencies
 
 - [WiFiNINA_Generic](https://github.com/khoih-prog/WiFiNINA_Generic) (Tested on 1.18.4-4)
-- [WifiWebServer](https://github.com/khoih-prog/WiFiWebServer) (1.8.0)
+- [WifiWebServer](https://github.com/khoih-prog/WiFiWebServer) (Tested on 1.8.0)
 
 ## Contributing
 

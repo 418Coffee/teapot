@@ -17,7 +17,7 @@ PICTURE HERE
 
 1. Install all [dependencies](#dependencies) using the libarary manager under `Tools`
 
-Optional: If you wan't to add a mapping for the 418 status code you can edit [\_responseCodeToString](https://github.com/khoih-prog/WiFiWebServer/blob/master/src/WiFiWebServer-impl.h) function in `\Arduino\libraries\WiFiWebServer\src\WifiWebServer-impl.h`
+Optional: If you wan't to add a mapping for the 418 status code you can edit [\_responseCodeToString](https://github.com/khoih-prog/WiFiWebServer/blob/master/src/WiFiWebServer-impl.h) function defined `\Arduino\libraries\WiFiWebServer\src\WifiWebServer-impl.h`
 
 2. Define variables in `env.h`
 3. Upload to arduino and visit http://192.168.2.69

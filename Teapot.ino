@@ -54,7 +54,7 @@ void loop() {
 }
 
 void handleRoot() {
-#define BUFFER_SIZE     512
+#define BUFFER_SIZE     1024
   char temp[BUFFER_SIZE];
   bool visited = false;
   uptime::calculateUptime();

@@ -20,8 +20,10 @@ const IPAddress ip(192, 168, 2, 69);
 
 void setup()
 {
+#if ENV_DEBUG
   Serial.begin(9600);
   while (!Serial); // wait for serial communication
+#endif
 
   WiFi.setHostname("Teapot");
   WiFi.config(ip); // Use static ip
@@ -77,13 +79,14 @@ void handleRoot() {
           <meta http-equiv='refresh' content='10'/>\
           <title>Teapot</title>\
           <style>\
-          body { background-color: #cccccc; font-family: Arial, Helvetica, Sans-Serif; Color: #000088; }\
+          body { background-color: #cccccc; font-family: Arial, Helvetica, Sans-Serif; Color: #105d61; }\
           </style>\
           </head>\
           <body>\
-          <h1>Hello from Teapot</h1>\
+          <h1>I'm a teapot</h1>\
           <h3>View count: %d</h3>\
           <p>Uptime: %d %s %d %s %d %s %d %s %d %s</p>\
+          <img src='https://downtremendous.com/teapot_small.jpg' alt='teapot'>\
           </body>\
           </html>",
            reqCount,
@@ -101,7 +104,8 @@ void handleNotFound() {
   message += server.uri();
   message += F(" was not found\n\n");
   message += F("Method: ");
-  message += (server.method() == HTTP_GET) ? F("GET") : F("POST");
+  message += (server.method() == HTTP_GET) ? F("GET\n\n") : F("POST\n\n");
+  message += "I'm still teapot...";
   server.send(418, F("text/plain"), message);
 }
 

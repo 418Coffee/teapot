@@ -3,9 +3,9 @@
 A teapot implementing the [Hyper Text Coffee Pot Control Protocol (HTCPCP)](https://en.wikipedia.org/wiki/Hyper_Text_Coffee_Pot_Control_Protocol) as per RFC 2324.
 Of course this is not an actual implementation (teapots aren't meant to implement this protocol), only a tribute to the 418 status code.
 
-An Arduino Nano 33 IoT in the teapot is serving a webserver at: TODO
+An Arduino Nano 33 IoT in the teapot is serving a webserver, for security reasons I have decided not to set up portforwading. 
 <p align="left">
-  <img src="https://github.com/418Coffee/teapot/blob/main/teapot_small.jpeg">
+  <img src="https://user-images.githubusercontent.com/63408077/170868929-616d20a4-738d-4070-8ced-817fc66849ed.png">
 </p>
 
 ## Table of contents

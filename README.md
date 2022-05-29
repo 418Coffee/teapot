@@ -23,7 +23,8 @@ An Arduino Nano 33 IoT in the teapot is serving a webserver at: http://418coffee
 Optional: If you wan't to add a mapping for the 418 status code you can edit [\_responseCodeToString](https://github.com/khoih-prog/WiFiWebServer/blob/master/src/WiFiWebServer-impl.h) function defined `\Arduino\libraries\WiFiWebServer\src\WifiWebServer-impl.h`
 
 2. Define variables in `env.h`
-3. Upload to arduino and visit http://192.168.2.69
+Recommended: You can create a DHCP binding in your router to your IoT device so the teapot's IP is static.
+3. Upload to arduino and visit the local IP displayed in the serial monitor in your webbrowser.
 
 ## Dependencies
 

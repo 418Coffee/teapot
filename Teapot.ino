@@ -74,21 +74,19 @@ void handleRoot() {
   const char* pluralMinutes = uptime::getMinutes() == 1 ? "minute" : "minutes";
   const char* pluralSeconds = uptime::getSeconds() == 1 ? "second" : "seconds";
   snprintf(temp, BUFFER_SIZE - 1,
-           "<html>\
-          <head>\
-          <meta http-equiv='refresh' content='10'/>\
-          <title>Teapot</title>\
-          <style>\
-          body { background-color: #cccccc; font-family: Arial, Helvetica, Sans-Serif; Color: #105d61; }\
-          </style>\
-          </head>\
-          <body>\
-          <h1>I'm a teapot</h1>\
-          <h3>View count: %d</h3>\
-          <p>Uptime: %d %s %d %s %d %s %d %s %d %s</p>\
-          <img src='https://downtremendous.com/teapot_small.jpg' alt='teapot'>\
-          </body>\
-          </html>",
+  "<html><head>\
+  <meta http-equiv='refresh' content='10'/>\
+  <title>Teapot</title>\
+  <style>\
+  body { background-color: #cccccc; font-family: Arial, Helvetica, Sans-Serif; Color: #105d61; }\
+  </style>\
+  </head>\
+  <body>\
+  <h1>I'm a teapot</h1>\
+  <h3>View count: %d</h3>\
+  <p>Uptime: %d %s %d %s %d %s %d %s %d %s</p>\
+  <img src='https://downtremendous.com/teapot_small.jpg' alt='teapot'>\
+  </body></html>",
            reqCount,
            uptime::getYears(), pluralYears,
            uptime::getDays(), pluralDays,

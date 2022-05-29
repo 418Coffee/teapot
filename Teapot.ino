@@ -1,6 +1,4 @@
 #include "env.h"
-//#include <WiFiNINA.h>
-#include <WiFiNINA_Generic.h>
 #include <WiFiWebServer.h>
 #include "uptime.h"
 #if ENV_DEBUG
@@ -16,7 +14,6 @@ int status = WL_IDLE_STATUS;
 unsigned long reqCount = 0;
 
 WiFiWebServer server(port);
-const IPAddress ip(192, 168, 2, 69);
 
 void setup()
 {
@@ -26,7 +23,6 @@ void setup()
 #endif
 
   WiFi.setHostname("Teapot");
-  WiFi.config(ip); // Use static ip
   printf("Attempting to connect to network named: %s\n", ssid);
   while (status != WL_CONNECTED) {
     status = WiFi.begin(ssid, pass);
@@ -54,7 +50,7 @@ void loop() {
 }
 
 void handleRoot() {
-#define BUFFER_SIZE     1024
+#define BUFFER_SIZE     512
   char temp[BUFFER_SIZE];
   bool visited = false;
   uptime::calculateUptime();

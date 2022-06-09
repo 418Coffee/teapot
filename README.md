@@ -16,7 +16,7 @@ An Arduino Nano 33 IoT in the teapot is serving a webserver at: http://418coffee
 - [Contributing](#contributing)
 - [License](#license)
 
-## Installation
+## Installation (Using Arduino IDE)
 
 1. Install all [dependencies](#dependencies) using the libarary manager under `Tools`
 
